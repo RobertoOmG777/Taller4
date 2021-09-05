@@ -10,7 +10,7 @@ h1 {
   text-transform: uppercase;
 }
 body {
-  background-image: url(beige-tiles.png);
+  background-image: url(/img/beige-tiles.png);
   margin: 0;
 }
 button {
