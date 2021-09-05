@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="carMaterialize.css">
+
+
+
+    <title>Car Materialize</title>
+</head>
+
+<body>
+
+
+
+    <div class="section container ">
+
+
+        <div class="row">
+
+            <form action="https://www.google.com/" class="col s12">
+                <div class="row card-panel">
+                    <div class="column s12 ">
+                        <h1 class="center-align card-panel purple darken-3">Registro automovil</h1>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <select>
+                            <option disabled selected>Tipo de combustible</option>
+                            <option value="1">Gasolina</option>
+                            <option value="2">Diesel</option>
+                            <option value="3">Electrico</option>
+                            <option value="4">Gas</option>
+                        </select>
+                        <label>Seleccione el tipo de combustible:</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <select>
+
+                            <option disabled selected>Tipo de Vehiculo</option>
+                            <option value="urban">Tipo Urbano</option>
+                            <option value="subcompact">Tipo Subcompacto</option>
+                            <option value="urban">Tipo Familiar</option>
+                        </select>
+                        <label>Tipo de vehiculo:</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <select>
+
+                            <option disabled hidden selected>Estado del vehículo</option>
+                            <option value="new">Nuevo</option>
+                            <option value="used">Usado</option>
+                            <option value="reacon">Reacondicionado</option>
+                        </select>
+                        <label>Tipo de vehiculo:</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <select>
+
+                            <option disabled selected>Marca del vehiculo</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="kia">Kia</option>
+                            <option value="peugeot">Peugeot</option>
+                            <option value="renault">Renault</option>
+                            <option value="opel">Opel</option>
+                            <option value="ford">Ford</option>
+                            <option value="seat">Seat</option>
+                            <option value="skoda">Skoda</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        <label>Tipo de vehiculo:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" id="modelo" class="validate" required maxlength="12">
+                        <label for="modelo">Ingrese el modelo del vehiculo:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" id="anio" pattern="\d*" maxlength="4">
+                        <label for="anio">Ingrese el año del vehiculo:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" id="cajacambios" class="validate" required maxlength="12">
+                        <label for="cajacambios">Ingrese qué tipo de caja de cambios tiene:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" id="tipomotor" class="validate" required maxlength="12">
+                        <label for="tipomotor">Ingrese el tipo de motor:</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input type="text" class="datepicker validate" id="fecha" required>
+                        <label for="fecha">Ingrese la fecha de compra del vehiculo:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="number" id="precio" class="validate" required>
+                        <label for="documento">Ingrese el precio del vehiculo:</label>
+                    </div>
+                    <div class="col s12">
+                        <p>Moneda:</p>
+                    </div>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" />
+                            <span>Pesos</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" />
+                            <span>Dolares</span>
+                        </label>
+                    </p>
+
+                    <div class="input-field col s12">
+                        <textarea  id="textarea1" class="materialize-textarea" cols="30" rows="10"></textarea>
+                        <label for="textaarea1">Ingrese una descripcion de su vehiculo:</label>
+                    </div>
+                    <button class="waves-effect btn" type="submit">Enviar
+                        <i class="material-icons right">directions_car</i>
+                    </button>
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+
+        $(document).ready(function () {
+            $('.datepicker').datepicker();
+        });
+    </script>
+
+</body>
+
+</html>
