@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylescarcss.css">
+    <title>Cars</title>
+</head>
+<body>
+    <div class="formulario">
+        
+        <form action="https://www.facebook.com/" class="form" method="POST">
+            <h1>&bull;Registra tu automovil&bull;</h1>
+            <div class="icon_wrapper">
+                <img src="automobile-transportation-svgrepo-com.svg" alt="logo" class="icon">
+            </div>
+            
+           
+               <div class="combustible">
+                   <label for="CombusType"></label>
+                   <select name="combustible" placeholder="Tipo de Combustible" id="movidoa">
+                    <option disabled hidden selected>Tipo de Combustible</option>   
+                    <option value="Gasolina">Gasolina</option>
+                       <option value="Diesel">Diesel</option>
+                       <option value="Electric">Electrico</option>
+                       <option value="gas">Gas</option>
+                   </select>
+
+               </div>
+               <div class="vehiculo">
+                   <label for="VehicleTyp" ></label>
+                   <select name="typeofVehi" placeholder="Tipo de vehiculo"   id="tipocoche">
+                    <option disabled hidden selected>Tipo de Vehiculo</option>   
+                    <option value="urban">Tipo Urbano</option>
+                       <option value="subcompact">Tipo Subcompacto</option>
+                       <option value="urban">Tipo Familiar</option>
+                   </select>
+
+               </div>
+        
+            <div class="vehiclestatus"> 
+                <label for="VehiclState"></label>
+                <select name="state" placeholder="Estado del vehículo" id="estado">
+                    <option disabled hidden selected>Estado del vehículo</option> 
+                    <option value="new">Nuevo</option>
+                    <option value="used">Usado</option>
+                    <option value="reacon">Reacondicionado</option>
+                </select>
+
+            </div>
+            <div class="vehiclemark" >
+                
+                <label for="MarkVehicle"></label>
+                <select name="marca" placeholder="Marca del vehiculo" id="mark">
+                <option disabled hidden selected>Marca del vehiculo</option>
+                <option value="toyota">Toyota</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="kia">Kia</option>
+                <option value="peugeot">Peugeot</option>
+                <option value="renault">Renault</option>
+                <option value="opel">Opel</option>
+                <option value="ford">Ford</option>
+                <option value="seat">Seat</option>
+                <option value="skoda">Skoda</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+                </select>
+            </div>
+            <!-- Toyota Aygo, el Hyundai i10, el Kia Picanto o el Peugeot 108, 
+	       Renault Captur, Opel Corsa, Ford Fiesta, Kia Rio, Peugeot 2008
+	       SEAT León ST, un Hyundai i30 CW o un Škoda Superb Combi, 
+           Mercedes-Benz Clase E,Audi A6 Allroad, Mercedes-Benz CLA -->
+
+            
+             
+
+            <div class="vehiclemodel">
+                
+                <label for="Vmodel" ></label>
+                <input type="text" required placeholder="Ingrese el modelo de su vehiculo" name="Vmodel" id="V_model">
+            </div>
+            <div class="vehicleyear">
+                <label for="YearVehicle" ></label> 
+                <input type="text" placeholder="Ingrese el año del Vehiculo" required name="vehicleYear" id="v_year">
+
+            </div>
+
+        
+            <div class="cajacambios">
+
+                <label for="cajacambios" ></label>
+                <input type="text" required placeholder="Ingrese tipo de caja de cambios de su vehiculo" name="cajacambios" id="caja_cambios">
+            </div>
+            <div class="motortype">
+                <label for="motortype"></label>
+                <input type="text" required placeholder="Tipo motor del vehículo" >
+
+            </div>
+        
+            <div class="date">
+                <label for="date">Fecha adquisición del vehículo</label>
+                <input type="date" required> 
+
+            </div>
+            <div class="price">
+                <label for="price"></label>
+                <input type="number" required placeholder="Ingrese el precio del vehículo">
+
+            </div>
+        
+            
+              <div class="wrapper">
+                  <label for="">Moneda</label>
+                <input type="radio" name="select" id="option-1" checked>
+                <input type="radio" name="select" id="option-2">
+                <label for="option-1" class="option option-1">
+                    <div class="dot"></div>
+                    <span>USD</span>
+                    </label>
+                <label for="option-2" class="option option-2">
+                    <div class="dot"></div>
+                    <span>COP</span>
+                </label>
+                </div>
+            <div class="descripcion">
+                <textarea name="desc" id="cc_pic" cols="50" rows="10" placeholder="Escribe una descripcion de tu vehículo"></textarea>
+            </div>
+            
+        
+            <div>
+                <input type="submit" value="Enviar" id="botonform"></button>   
+
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
