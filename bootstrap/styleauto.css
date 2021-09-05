@@ -1,0 +1,59 @@
+body{
+    background-image: url(Auto.jpg);
+    background-size: cover;
+    background-repeat: none;
+    background-attachment: fixed;
+}
+
+.formulario{
+    background-image: var(--bs-gradient);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 230px) auto;
+    max-width: calc(100vw - 80px);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: white;
+}
+
+.form-label{
+    font-family: "Montserrat", sans-serif;
+    font-size: larger;
+}
+
+.form-control{
+    background-image: var(--bs-gradient);
+    background-color: rgb(194, 194, 194) ;
+    border-style: none;
+    transition: 0.5s ease-in;
+}
+
+.form-control::placeholder{
+    background-image: var(--bs-gradient);
+    font-size: medium;
+    color: rgb(107, 105, 105);
+}
+
+.form-control:focus{
+    background-image: var(--bs-gradient);
+    background-color: rgb(155, 154, 154);
+    color: rgb(77, 77, 77);
+    box-shadow: none;
+}
+
+.form-select{
+    background-image: var(--bs-gradient);
+    background-color: rgb(160, 160, 160);
+    font-family: "Montserrat", sans-serif;
+}
+
+.form-text{
+    color: white;
+}
+
+.form-check{
+    color: white;
+    font-size: large;
+}
