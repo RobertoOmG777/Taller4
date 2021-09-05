@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Taller numero 4 HTML</title>
+    <link rel="stylesheet" href="stylesusercss.css">
+</head>
+<body>
+    
+    <div class="formulario">
+        
+        <form action="https://www.facebook.com/" class="form" method="POST">
+            <h1>Datos de usuario</h1>
+            
+            <p>
+            <label for="">Nombre</label>
+            <input placeholder="Ingrese su nombre" required></input>
+        </p>
+        <p>
+            <label for="">Apellido</label><br>
+            <input type="text" name="apellido" placeholder="Ingrese su apellido" required><br>
+
+        </p> 
+        <p>
+            <label for="">País</label><br>
+            <select name="País" class="select-select">
+                <option value="Colombia" id="1">Colombia</option>
+                <option value="Ecuador" id="2">Ecuador</option>
+                <option value="Perú" id="3">Perú</option>
+                <option value="Venezuela" id="4">Venezuela</option>
+                <option value="Argentina" id="5">Argentina</option>
+                <option value="Brasil" id="6">Brasil</option>
+                <option value="Chile" id="7">Chile</option>
+            </select>
+        </p>   
+        <p>
+            <label for="">dirección</label><br>
+            <input type="text" placeholder="Ingrese su dirección" name="direccion" required><br>
+
+        </p>
+        <p>
+            <label for="">Identificación</label><br>
+            <select name="identificacion" class="select-select" title="identificacion" required>
+                <option value="CC" id="cedula">Cédula</option>
+                <option value="IT" id="Identidad">Tarjeta de identidad</option>
+                <option value="CE" id="extranje">Cédula de extranjeria</option>
+            </select><br>
+            <input type="text" placeholder="Ingrese su numero de identificación" pattern="[0-9]{10}" required>
+        </p>
+        <p>
+            <label for="">Contraseña</label><br>
+            <input type="password" name="contraseña" placeholder="Ingrese su contraseña" required><br>
+        </p>
+        <p>
+            <label for="">E-mail</label><br>
+            <input type="email" name="email" placeholder="ejm: alex@hotmail.com"required><br>
+        </p>
+        <P>
+            <label for="" >Teléfono</label><br>
+            <input type="tel" name="telefono" pattern="\([0-9]{2}\) [0-9]{3}[ ][0-9]{3}[ ][0-9]{4}" placeholder="eg. (57) 315 456 4325" title="Numero invalido" required><br>
+        </P>
+            <button class="registrarse font-button background-button position">Registrarse</button>
+            
+            
+            
+            
+            
+        </form>
+    </div>
+    
+</body>
+</html>
