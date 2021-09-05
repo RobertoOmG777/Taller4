@@ -1,0 +1,237 @@
+h1 {
+  max-width: 768px;
+  margin: 0px auto;
+  position: relative;
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+body {
+  background-image: url(beige-tiles.png);
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+input,
+select,
+textarea {
+  color: #5a5a5a;
+  font: inherit;
+  margin: 0;
+}
+input {
+  line-height: normal;
+}
+textarea {
+  overflow: auto;
+}
+form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+.vehiculo {
+  float: left;
+  width: 100%;
+}
+input[type="text"],
+[type="number"],
+[type="date"],
+[type="radio"],
+select,
+textarea {
+  background: none;
+  border: none;
+  border-bottom: solid 2px #474544;
+  color: #474544;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0em 0 1.875em 0;
+  padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+input[type="text"]:focus,
+[type="number"]:focus,
+textarea:focus {
+  outline: none;
+  padding: 0 0 0.875em 0;
+}
+.combustible {
+  float: left;
+  width: 100%;
+}
+select {
+  background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png")
+    no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+.vehiclemodel {
+  width: 100%;
+}
+textarea {
+  line-height: 150%;
+  height: 150px;
+  resize: none;
+  width: 100%;
+}
+::-webkit-input-placeholder {
+  color: #474544;
+}
+
+:-moz-placeholder {
+  color: #474544;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #474544;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #474544;
+}
+#botonform {
+  background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#form_button:hover {
+  background: #474544;
+  color: #f2f3eb;
+}
+input[type="text"],
+[type="number"],
+[type="radio"],
+select,
+textarea {
+  font-size: 0.875em;
+}
+.wrapper {
+  display: inline-flex;
+
+  height: 80px;
+
+  width: 230px;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 20px 15px;
+}
+.wrapper .option {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #0069d9;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"] {
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2 {
+  border-color: #0069d9;
+  background: #0069d9;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot {
+  background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span {
+  font-size: 16px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span {
+  color: #fff;
+}
+label {
+  color: #474544;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+html {
+  font-family: "Montserrat", Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.icon_wrapper {
+  margin: 60px auto 0;
+  width: 100%;
+}
+
+.icon {
+  display: block;
+  fill: #474544;
+  height: 50px;
+  margin: 60px auto;
+  width: 50px;
+}
