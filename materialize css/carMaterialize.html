@@ -124,8 +124,72 @@
                     </p>
 
                     <div class="input-field col s12">
-                        <textarea  id="textarea1" class="materialize-textarea" cols="30" rows="10"></textarea>
+                        <textarea id="textarea1" class="materialize-textarea" cols="30" rows="10"></textarea>
                         <label for="textaarea1">Ingrese una descripcion de su vehiculo:</label>
+                    </div>
+                    <div class="col s12">
+                        <p><b>Desea abrir el gestor de gustos:</b></p>
+                    </div>
+                    <p class="col s6">
+                        <label>
+                            <input name="grupos" type="radio" id="Sí" onclick="mostrarSelector()"/>
+                            <span>Sí</span>
+                        </label>
+                    </p>
+                    <p class="col s6">
+                        <label>
+                            <input name="grupos" type="radio" id="No"  onclick="mostrarSelector()"/>
+                            <span>No</span>
+                        </label>
+                    </p>
+                    <div class="input-field card-panel col s12" id="salidaMensaje" style= "display: none;">
+                        <h6>Selector de gustos:</h6>
+                        <select>
+
+                            <option disabled selected>Color favorito</option>
+                            <option value="c1">Azul</option>
+                            <option value="c2">Rojo</option>
+                            <option value="c3">Beige</option>
+                            <option value="c4">Negro</option>
+                            <option value="c5">Verde</option>
+                            <option value="c6">Naranja</option>
+                            <option value="c7">Amarillo</option>
+                            <option value="c8">Gris</option>
+
+                        </select>
+
+                        <select>
+
+                            <option disabled selected>Marca del vehiculo</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="kia">Kia</option>
+                            <option value="peugeot">Peugeot</option>
+                            <option value="renault">Renault</option>
+                            <option value="opel">Opel</option>
+                            <option value="ford">Ford</option>
+                            <option value="seat">Seat</option>
+                            <option value="skoda">Skoda</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+
+                        <select>
+
+                            <option disabled selected>Tipo de vehiculo</option>
+                            <option value="toyota">Automóvil pequeño</option>
+                            <option value="hyundai">Familiar</option>
+                            <option value="kia">Berlina</option>
+                            <option value="peugeot">Monovolumen</option>
+                            <option value="renault">Deportivos</option>
+                            <option value="opel">Furgonetas</option>
+                            <option value="ford">Limusina</option>
+                        </select>
+                        <br>
+                        <p class="range-field s6">
+                            <input type="range" id="rangoPrecio" min="1" max="10000" />
+                            <label for="">precio dispuesto a pagar (En dolares): </label>
+                        </p>
                     </div>
                     <button class="waves-effect btn" type="submit">Enviar
                         <i class="material-icons right">directions_car</i>
@@ -142,6 +206,7 @@
     <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="validacionesCar.js"></script>
     <script>
         $(document).ready(function () {
             $('select').formSelect();
