@@ -77,5 +77,25 @@ body{
         color: #000; /* no need for !important :) */
     }
 
+    .valid {
+        color: green;
+      }
+      
+   
+      
+    
+    .invalid {
+        color: red;
+      }
+
+    input[type="password"]{
+        color: black; 
+    }
+    input[type="text"]{
+        color: black; 
+    }
+
+   
+
 
 
