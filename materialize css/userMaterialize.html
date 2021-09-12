@@ -75,11 +75,12 @@
                     </div>
 
                     <div class="input-field col s12">
-                        <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*#%/&)" class="validate" required minlength="10" maxlength="20"
-                            title="La contraseña debe contener letras mayusculas, minusculas, numeros y al menos unos de los siguientes caracteres: #,%,/,& (minimo 10 caracteres, maximo 20 caracteres)">
-                        <label for="password">Ingrese su contraseña</label>
+                        <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
+                            title="Debe contener al menos 10 caracteres, una mayuscula y una minuscula."
+                            required>
+                            <label for="password">Ingrese su contraseña</label>
                     </div>
-                    <div  class="input-field card-panel col s12" id="mensaje">
+                    <div class="input-field card-panel col s12" id="mensaje">
                         <h6>La contraseña debe contener lo siguiente:</h3>
                             <p id="minuscula" class="invalid">Una <b>letra minuscula.</b> </p>
                             <p id="mayuscula" class="invalid">Una <b>letra mayuscula.</b> </p>
@@ -102,7 +103,8 @@
                     </div>
 
                     <div class="input-field col s12">
-                        <input type="email" id="email" class="validate" required maxlength="120" title="Ingrese su correo (Max 120 caracteres)" >
+                        <input type="email" id="email" class="validate" required maxlength="120"
+                            title="Ingrese su correo (Max 120 caracteres)">
                         <label for="email">Email:</label>
                     </div>
 

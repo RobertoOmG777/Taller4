@@ -27,7 +27,7 @@ function validarForm(evento) {
 
     }
 
-    var pass1 = document.getElementById("password").value;
+    var pass1 = document.getElementById("psw").value;
     var pass2 = document.getElementById("passwordconfirm").value;
     //SI MANDO EL FORMULARIO Y NO COINCIDEN LAS CONTRASENIAS PASA LO SIGUIENTE: 
     if (pass1 != pass2) {
@@ -63,7 +63,7 @@ function SoloLetrasNumeros(e) {
 
 
 //VALIDACION DE CONTRASENIA 
-var input_pss = document.getElementById("password");
+var input_pss = document.getElementById("psw");
 var minuscula = document.getElementById("minuscula");
 var mayuscula = document.getElementById("mayuscula");
 var numero = document.getElementById("number");
