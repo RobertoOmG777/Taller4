@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grillas JQuery</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Grillas Jquery</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo-tabla">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(json => 
+                json.forEach(i => {
+                    var columna = `<tr>
+                                    <td>${i.id}</td>
+                                    <td>${i.name}</td>
+                                    <td>${i.username}</td>
+                                    <td>${i.email}</td>
+                                </tr>`
+                    var tabla = $('#cuerpo-tabla')
+                    tabla.append(columna)
+                })  
+            
+            )
+    </script>
+</body>
+
+</html>
