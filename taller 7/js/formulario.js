@@ -1,3 +1,4 @@
+
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
@@ -8,7 +9,7 @@ const expresiones = {
 	fecha: /^(?: (?: 31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/,
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono:/^\d{12}$/
+	telefono: /^\d{12}$/
 }
 
 const campos = {
@@ -19,7 +20,7 @@ const campos = {
 	telefono: false,
 	password: false,
 	correo: false
-	
+
 
 }
 const fecha = document.getElementById("fecha");
@@ -48,70 +49,110 @@ function calcularEdad(fecha) {
 
 
 }
-(()=>{
-	const departamentoID=document.getElementById('departamentos'),
-	$fragment=document.createDocumentFragment();
+(() => {
+	const departamentoID = document.getElementById('departamentos'),
+		$fragment = document.createDocumentFragment();
 	// departamentoID.length=0;
 	// departamentoID.selectedIndex=0;
-	
+
 
 	fetch("https://raw.githubusercontent.com/marcovega/colombia-json/master/colombia.min.json")
-	.then((respuesta)=>(respuesta.ok ? respuesta.json():Promise.reject(respuesta)))
-	 .then(json=>{ 
+		.then((respuesta) => (respuesta.ok ? respuesta.json() : Promise.reject(respuesta)))
+		.then(json => {
 
-		json.forEach(i => {
-			
-			const option=`<option>${i.departamento}</option>`;
-			departamentoID.append(option);
-			console.log(i.departamento);
 
-			  
-				  
-				  
-				  
-			
-					
-				  
-			  
-			
+			json.forEach(i => {
 
-			
-		});
-		 
-	 	//  for (let i = 0; i < json.length; i++) {
-		// 	  const option=document.createElement("option");
-			  
-				  
-				  
-				  
-		// 			 option.text=json[i].ciudades;
-		// 			 option.value=json[i].id;
-					
-				  
-			  
-		// 	  ciudadesID.add(option);
-		//   }
-		
-		
-		
-		 
-		// Response.json().then(function(data){
-		// 	for (let i = 0; i < data.length; i++) {
-		// 		const option=document.createElement("option");
-		// 		option.text=data[i].ciudades;
-		// 		$ciudades.add(option);
-				
-		// 	}
-		// }
-		
-		 })	
-		.catch((error)=>{
-		console.log(error)
-			let mensaje=error.statusText || "Ha ocurrido un error";
-			departamentoID.innerHTML=`$Error ${error.status}:${mensaje}`;
-			
-	})
+				posicion = i.id;
+
+				const opcion = `<option value ="` + posicion.toString() + `"onclick = agregarCiudad(this)>${i.departamento}</option>`;
+				const selector = $('#departamentos');
+				selector.append(opcion);
+
+			});
+
+
+
+			json.forEach(i => {
+				id_opcion = document.getElementById(i.id);
+
+			});
+
+
+
+			//  for (let i = 0; i < json.length; i++) {
+			// 	  const option=document.createElement("option");
+
+
+
+
+			// 			 option.text=json[i].ciudades;
+			// 			 option.value=json[i].id;
+
+
+
+			// 	  ciudadesID.add(option);
+			//   }
+
+
+
+
+			// Response.json().then(function(data){
+			// 	for (let i = 0; i < data.length; i++) {
+			// 		const option=document.createElement("option");
+			// 		option.text=data[i].ciudades;
+			// 		$ciudades.add(option);
+
+			// 	}
+			// }
+
+		})
+
+		.catch((error) => {
+			console.log(error)
+			let mensaje = error.statusText || "Ha ocurrido un error";
+			departamentoID.innerHTML = `$Error ${error.status}:${mensaje}`;
+
+		})
 })();
+const url = "https://raw.githubusercontent.com/marcovega/colombia-json/master/colombia.min.json"
+
+
+var xhReq = new XMLHttpRequest();
+xhReq.open("GET", url, false);
+xhReq.send(null);
+var var_json = JSON.parse(xhReq.responseText);
+
+
+
+
+
+
+const array_ciudades = []
+for (let i = 0; i < var_json.length; i++) {
+	array_ciudades.push(var_json[i].ciudades)
+}
+
+function agregarCiudad(a) {
+	$('#ciudades').empty(); 
+	array_ciudades[a.value].forEach(i => {
+
+		const opcion = `<option>${i}</option>`;
+		const selector = $('#ciudades');
+		selector.append(opcion);
+
+	});
+
+
+
+
+
+
+}
+
+
+
+
 
 window.addEventListener('load', function () {
 
@@ -153,7 +194,7 @@ const validarFormulario = (e) => {
 		case "correo":
 			validarCampo(expresiones.correo, e.target, 'correo');
 			break;
-		
+
 
 	}
 }
@@ -206,7 +247,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if (campos.usuario && campos.nombre && campos.apellido && campos.fecha && campos.telefono && campos.password && campos.correo ) {
+	if (campos.usuario && campos.nombre && campos.apellido && campos.fecha && campos.telefono && campos.password && campos.correo) {
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
