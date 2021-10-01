@@ -11,7 +11,7 @@
 </head>
 <body >
 	<main>
-		<form action="" class="formulario" id="formulario">
+		<form action="" method="GET" class="formulario" id="formulario">
 			<!-- Grupo: Usuario -->
 			<div class="formulario__grupo" id="grupo__usuario">
 				<label for="usuario" class="formulario__label">Usuario</label>
@@ -63,10 +63,10 @@
 				
 			</div>
 			<!-- Grupo: telefono -->
-			<div class="forumulario_grupo" id="grupo_telefono">
+			<div class="formulario__grupo" id="grupo__telefono">
 				<label for="phone" class="formulario__label">Telefono</label>
-				<div class="forumulario_grupo-input">
-					<input type="text" class="formulario__input" id="telefono"  placeholder="Eg. 573154323211">
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" id="telefono" name="telefono" placeholder="Eg. 57-315-432-3211">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El telefono debe contener 12 caracteres incluido el codigo de pais de 2 digitos</p>
@@ -124,10 +124,12 @@
 			<div class="formulario__grupo" id="grupo__ciudad">
 				<label for="ciudad" class="formulario__label">Elija su ciudad de residencia</label>
 				<div class="formulario__grupo-input">
-					<select name="departamentos" id="departamentos" class="select_municipios"></select>
+					<select name="departamentos" id="departamentos" class="formulario__input" ></select>
 					<br><br>
-					<select name="ciudades" id="ciudades" class="select_ciudades"></select>
+					<select name="ciudades" id="ciudades" class="formulario__input" ></select>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
+				<p class="formulario__input-error">Debe seleccionar una ciudad</p>
 
 			</div>
 
